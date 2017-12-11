@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  menuList = ['首页', '日常动态', '实验室'];
+  constent = 'Just to build web site by angular';
 }

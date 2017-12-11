@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('demo-app App', () => {
+describe('onehower-ng App', () => {
   let page: AppPage;
 
   beforeEach(() => {
