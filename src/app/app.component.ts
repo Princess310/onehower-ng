@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  menuList = ['首页', '日常动态', '实验室'];
+  menuList = [{
+    name: '首页',
+    path: '/',
+  }, {
+    name: '日常动态',
+    path: '/daily',
+  }, {
+    name: 'widgets',
+    path: '/',
+  }];
   constent = 'Just to build web site by angular';
 }
