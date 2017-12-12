@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
+
+const SMALL_WIDTH_BREAKPOINT = 720;
 
 @Component({
   selector: 'app-root',
@@ -6,15 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  menuList = [{
-    name: '首页',
-    path: '/',
-  }, {
-    name: '日常动态',
-    path: '/daily',
-  }, {
-    name: 'widgets',
-    path: '/',
-  }];
-  constent = 'Just to build web site by angular';
+  private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
+
+  constructor(zone: NgZone) {
+    this.mediaMatcher.addListener(mql => zone.run(() => this.mediaMatcher = mql));
+  }
+
+  isScreenSmall(): boolean {
+    return this.mediaMatcher.matches;
+  }
 }

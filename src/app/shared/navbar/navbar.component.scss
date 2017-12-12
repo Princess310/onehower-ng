@@ -5,9 +5,25 @@
   height: 64px;
   padding: 0 16px;
 
-  > .mat-button {
+  > .mat-icon-button {
     &:last-child {
       margin-left: auto;
     }
+  }
+}
+
+.app-name {
+  display: none;
+  margin-left: 8px;
+  font-size: 24px;
+}
+
+@media (max-width: 720px) {
+  .menu-list {
+    display: none;
+  }
+
+  .app-name {
+    display: block;
   }
 }

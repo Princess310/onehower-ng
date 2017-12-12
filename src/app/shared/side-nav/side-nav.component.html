@@ -1,0 +1,22 @@
+<div class="user-card flex-column-center">
+  <div class="content flex-row">
+    <app-avatar src="./assets/images/person-avatar.jpg"></app-avatar>
+    <div class="info flex-column">
+      <div>Princess310</div>
+      <div>One - Hower</div>
+    </div>
+  </div>
+  <div class="desc">追求卓越是我们一直坚持的方向!</div>
+</div>
+
+<mat-nav-list>
+  <a mat-list-item routerLink="{{menu.path}}" (click)="changeSiderNav()" *ngFor="let menu of menuList">
+    <mat-icon mat-list-icon>{{menu.icon}}</mat-icon>
+    <h4 mat-line>{{menu.name}}</h4>
+  </a>
+  <mat-divider></mat-divider>
+  <a mat-list-item *ngFor="let menu of links">
+    <mat-icon mat-list-icon svgIcon="{{menu.icon}}"></mat-icon>
+    <h4 mat-line>{{menu.name}}</h4>
+  </a>
+</mat-nav-list>

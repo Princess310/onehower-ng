@@ -1,15 +1,16 @@
 <nav class="navbar-header">
   <button mat-icon-button (click)="changeSiderNav()"><mat-icon>menu</mat-icon></button>
-  <a mat-button routerLink="/" routerLinkActive="active" aria-label="">
-    <span>首页</span>
-  </a>
-  <a mat-button routerLink="/daily" routerLinkActive="active" aria-label="">
-    <span>日常动态</span>
-  </a>
-  <a mat-button routerLink="/widgets" routerLinkActive="active" aria-label="">
-    <span>实验室</span>
-  </a>
-  <a mat-button aria-label="">
-    <mat-icon>mail</mat-icon>
-  </a>
+  <div class="app-name">OneHower</div>
+  <div class="menu-list">
+    <a mat-button routerLink="/" routerLinkActive="active" aria-label="">
+      <span>首页</span>
+    </a>
+    <a mat-button routerLink="/daily" routerLinkActive="active" aria-label="">
+      <span>日常动态</span>
+    </a>
+    <a mat-button routerLink="/widgets" routerLinkActive="active" aria-label="">
+      <span>实验室</span>
+    </a>
+  </div>
+  <a [href]="github" target="_blank" mat-icon-button><mat-icon svgIcon="github"></mat-icon></a>
 </nav>

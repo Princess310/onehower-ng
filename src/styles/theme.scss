@@ -12,3 +12,11 @@ $app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
 @include angular-material-theme($app-theme);
 
 @include nav-bar-theme($app-theme);
+
+::-webkit-scrollbar{width:2px;height:2px}
+::-webkit-scrollbar-button:vertical{display:none}
+::-webkit-scrollbar-track:vertical{background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:transparent;}
+::-webkit-scrollbar-thumb:vertical{background-color:map_get($app-primary, 400);border-radius:2px}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:vertical:active {background-color:map_get($app-primary, 400)}
