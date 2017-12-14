@@ -1,6 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material';
 
 @Component({
   selector: 'app-side-nav',
@@ -42,17 +40,7 @@ export class SideNavComponent implements OnInit {
     icon: 'blog',
   }];
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'gmail',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/logo/gmail.svg'));
-    iconRegistry.addSvgIcon(
-      'wechat',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/logo/wechat.svg'));
-    iconRegistry.addSvgIcon(
-      'blog',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/logo/blog.svg'));
-  }
+  constructor() { }
 
   ngOnInit() {
   }

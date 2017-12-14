@@ -15,7 +15,7 @@
     <h4 mat-line>{{menu.name}}</h4>
   </a>
   <mat-divider></mat-divider>
-  <a mat-list-item *ngFor="let menu of links">
+  <a mat-list-item href="{{menu.link}}" *ngFor="let menu of links">
     <mat-icon mat-list-icon svgIcon="{{menu.icon}}"></mat-icon>
     <h4 mat-line>{{menu.name}}</h4>
   </a>
